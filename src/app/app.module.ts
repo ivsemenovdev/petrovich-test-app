@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderTopComponent } from './blocks/header/components/header-top/header-top.component';
 import { HeaderMiddleComponent } from './blocks/header/components/header-middle/header-middle.component';
 import { HeaderBottomComponent } from './blocks/header/components/header-bottom/header-bottom.component';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -19,11 +20,12 @@ import { HeaderBottomComponent } from './blocks/header/components/header-bottom/
     HeaderMiddleComponent,
     HeaderBottomComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
