@@ -8,6 +8,7 @@ import { HeaderComponent } from './blocks/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderTopComponent } from './blocks/header/components/header-top/header-top.component';
 import { HeaderMiddleComponent } from './blocks/header/components/header-middle/header-middle.component';
+import { HeaderBottomComponent } from './blocks/header/components/header-bottom/header-bottom.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderMiddleComponent } from './blocks/header/components/header-middle/
     SiteLayoutComponent,
     HeaderComponent,
     HeaderTopComponent,
-    HeaderMiddleComponent
+    HeaderMiddleComponent,
+    HeaderBottomComponent
   ],
   imports: [
     BrowserModule,

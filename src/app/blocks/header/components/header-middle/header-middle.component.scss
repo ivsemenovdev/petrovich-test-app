@@ -1,5 +1,6 @@
 .header-middle-container {
   height: 77px;
+  border-bottom: 1px solid #ebedf8;
 }
 
 .wrapper {
@@ -7,6 +8,7 @@
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
+  height: 100%;
 }
 
 .header-middle__search {
