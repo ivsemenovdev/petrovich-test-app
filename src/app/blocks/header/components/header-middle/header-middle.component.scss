@@ -1,0 +1,30 @@
+.header-middle-container {
+  height: 77px;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.header-middle__search {
+  flex: 1
+}
+
+.header-middle__logo,
+.header-middle-nav,
+.header-middle__basket {
+  flex: 0;
+}
+
+.header-middle-nav__list {
+  display: flex;
+  padding: 0;
+}
+
+.header-middle-nav__item {
+  list-style-type: none;
+}
+

@@ -16,13 +16,14 @@
   &__list {
     display: flex;
     justify-content: space-around;
+    padding: 0;
   }
   &__item {
     list-style-type: none;
   }
 }
 
-.header-top-location
+.header-top-location,
 .header-top-auth {
   flex: 0;
 }

@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
 import { HeaderComponent } from './blocks/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderTopComponent } from './blocks/header/header-top/header-top.component';
+import { HeaderTopComponent } from './blocks/header/components/header-top/header-top.component';
+import { HeaderMiddleComponent } from './blocks/header/components/header-middle/header-middle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SiteLayoutComponent,
     HeaderComponent,
-    HeaderTopComponent
+    HeaderTopComponent,
+    HeaderMiddleComponent
   ],
   imports: [
     BrowserModule,
