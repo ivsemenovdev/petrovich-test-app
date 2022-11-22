@@ -1,0 +1,28 @@
+.header-top-container {
+  background-color: #fc3;
+  border-bottom: 4px solid #ffefbf;
+  height: 52px;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.header-top-nav {
+  flex: 1;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    list-style-type: none;
+  }
+}
+
+.header-top-location
+.header-top-auth {
+  flex: 0;
+}
