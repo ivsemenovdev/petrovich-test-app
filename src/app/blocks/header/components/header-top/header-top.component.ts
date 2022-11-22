@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-header-top',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-top.component.scss']
 })
 export class HeaderTopComponent {
-
+  menuItems = [
+    {item: 'Пункты самовывоза'},
+    {item: 'Доставка'},
+    {item: 'Самовывоз'},
+    {item: 'Акции'},
+    {item: 'Клуб друзей'},
+    {item: 'Услуги'},
+  ];
 }
