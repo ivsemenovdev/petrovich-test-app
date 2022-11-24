@@ -10,6 +10,7 @@ import { HeaderTopComponent } from './blocks/header/components/header-top/header
 import { HeaderMiddleComponent } from './blocks/header/components/header-middle/header-middle.component';
 import { HeaderBottomComponent } from './blocks/header/components/header-bottom/header-bottom.component';
 import {MatIconModule} from "@angular/material/icon";
+import { MainComponent } from './blocks/main/main.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatIconModule} from "@angular/material/icon";
     HeaderComponent,
     HeaderTopComponent,
     HeaderMiddleComponent,
-    HeaderBottomComponent
+    HeaderBottomComponent,
+    MainComponent
   ],
     imports: [
         BrowserModule,
