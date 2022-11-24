@@ -11,6 +11,7 @@ import { HeaderMiddleComponent } from './blocks/header/components/header-middle/
 import { HeaderBottomComponent } from './blocks/header/components/header-bottom/header-bottom.component';
 import {MatIconModule} from "@angular/material/icon";
 import { MainComponent } from './blocks/main/main.component';
+import { FooterComponent } from './blocks/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MainComponent } from './blocks/main/main.component';
     HeaderTopComponent,
     HeaderMiddleComponent,
     HeaderBottomComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,
