@@ -1,18 +1,4 @@
-<header class="header-top-container">
-  <div class="wrapper">
-    <nav class="header-top-nav">
-      <ul class="header-top-nav__list">
-        <li class="header-top-nav__item" *ngFor="let menuItem of menuItems">
-          <a routerLink="{{menuItem.route}}">{{menuItem.item}}</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header-top-location">
-      <mat-icon>location_on</mat-icon>
-      <div>Россия</div>
-    </div>
-    <div class="header-top-auth">
-      Войти
-    </div>
-  </div>
-</header>
+<div class="wrapper">
+  <app-header-top-nav-component></app-header-top-nav-component>
+  <app-header-top-right-col></app-header-top-right-col>
+</div>

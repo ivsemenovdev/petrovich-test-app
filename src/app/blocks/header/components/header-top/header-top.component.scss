@@ -1,40 +1,5 @@
-.header-top-container {
-  background-color: #fc3;
-  border-bottom: 4px solid #ffefbf;
-  height: 52px;
-}
-
 .wrapper {
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
-}
-
-.header-top-nav {
-  flex: 1;
-  &__list {
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-  }
-  &__item {
-    list-style-type: none;
-    a {
-      text-decoration: none;
-      color: black;
-    }
-  }
-}
-
-.header-top-location,
-.header-top-auth {
-  flex: 0;
-}
-
-.header-top-location {
-  display: flex;
-  align-items: center;
-  margin-right: 12px;
 }

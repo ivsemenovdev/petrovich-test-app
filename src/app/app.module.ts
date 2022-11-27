@@ -12,6 +12,11 @@ import { HeaderBottomComponent } from './blocks/header/components/header-bottom/
 import {MatIconModule} from "@angular/material/icon";
 import { MainComponent } from './blocks/main/main.component';
 import { FooterComponent } from './blocks/footer/footer.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { HeaderTopNavComponentComponent } from './blocks/header/components/header-top/components/header-top-nav-component/header-top-nav-component.component';
+import { HeaderTopRightColComponent } from './blocks/header/components/header-top/components/header-top-right-col/header-top-right-col.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -22,14 +27,19 @@ import { FooterComponent } from './blocks/footer/footer.component';
     HeaderMiddleComponent,
     HeaderBottomComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderTopNavComponentComponent,
+    HeaderTopRightColComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatIconModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatSelectModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
