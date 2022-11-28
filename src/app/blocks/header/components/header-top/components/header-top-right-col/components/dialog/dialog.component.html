@@ -8,5 +8,7 @@
     <input matInput>
     <!--    <input matInput [(ngModel)]="name">-->
   </mat-form-field>
-  <div mat-dialog-content class="dialog-content">This dialog showcases the title, close, content and actions elements.</div>
+  <div mat-dialog-content class="dialog-content">
+    <p *ngFor="let key of products">{{ key.name }}</p>
+  </div>
 </div>
