@@ -1,1 +1,12 @@
-<p>dialog works!</p>
+<div class="dialog">
+  <div class="dialog-close">
+    <mat-icon mat-dialog-close="true">close</mat-icon>
+  </div>
+  <h1 mat-dialog-title class="dialog-title">Выберите ваш город</h1>
+  <mat-form-field class="dialog-input">
+    <mat-label>Ваш город ...</mat-label>
+    <input matInput>
+    <!--    <input matInput [(ngModel)]="name">-->
+  </mat-form-field>
+  <div mat-dialog-content class="dialog-content">This dialog showcases the title, close, content and actions elements.</div>
+</div>

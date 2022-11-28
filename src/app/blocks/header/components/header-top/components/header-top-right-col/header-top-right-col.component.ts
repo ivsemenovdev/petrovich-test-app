@@ -13,7 +13,15 @@ export class HeaderTopRightColComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
-    this.dialog.open(DialogComponent);
+
+    let dialogBoxSettings = {
+      height: 'auto',
+      width: '500px',
+      margin: '0 auto',
+    };
+
+    this.dialog.open(DialogComponent, dialogBoxSettings);
+
   }
 }
 

@@ -25,6 +25,11 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {
   DialogComponent
 } from "./blocks/header/components/header-top/components/header-top-right-col/components/dialog/dialog.component";
+import {HttpClientModule} from "@angular/common/http";
+import {MatButtonModule} from "@angular/material/button";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -38,7 +43,7 @@ import {
     FooterComponent,
     HeaderTopNavComponentComponent,
     HeaderTopRightColComponent,
-    DialogComponent
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +54,10 @@ import {
     MatFormFieldModule,
     MatSelectModule,
     MatDialogModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

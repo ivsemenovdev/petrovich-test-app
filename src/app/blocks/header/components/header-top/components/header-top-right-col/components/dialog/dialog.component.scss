@@ -1,0 +1,21 @@
+.dialog {
+
+  user-select: none;
+
+  .dialog-close {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .dialog-input {
+    padding-left: 24px;
+  }
+
+  .dialog-content {
+    padding-left: 24px;
+  }
+
+}

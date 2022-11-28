@@ -3,5 +3,11 @@
 
   .header-top-location {
     display: flex;
+    align-items: center;
+  }
+
+  .location,
+  .location-icon {
+    cursor: pointer;
   }
 }
