@@ -8,12 +8,14 @@ import {HttpClient} from "@angular/common/http";
 })
 
 export class DialogComponent implements OnInit {
+
   products: any = [];
 
-  constructor(private httpClient: HttpClient){}
-  ngOnInit(){
-    this.httpClient.get("/assets/russian-cities.json").subscribe(data =>{
-      console.log(data);
+  constructor(private httpClient: HttpClient) {
+  }
+
+  ngOnInit() {
+    this.httpClient.get("/assets/russian-cities.json").subscribe(data => {
       this.products = data;
     })
   }
