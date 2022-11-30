@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +28,8 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { CitiesService } from './services/cities.service';
+import { CitiesSearchService } from './services/cities-search.service';
 
 
 @NgModule({
@@ -54,12 +55,11 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatSelectModule,
     MatDialogModule,
-    HttpClientModule,
     MatButtonModule,
     MatInputModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CitiesService, CitiesSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

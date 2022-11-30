@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { CitiesService } from 'src/app/services/cities.service';
+import { CitiesSearchService } from 'src/app/services/cities-search.service';
+import { ICities } from '../../../../../../../../services/cities.interface';
 
 @Component({
   selector: 'app-dialog',
@@ -7,23 +9,37 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./dialog.component.scss']
 })
 
+
 export class DialogComponent implements OnInit {
 
-  products: any = [];
+  public cities: ICities[] = [];
+  public searchValue = '';
+  public citiesFound: ICities[] = [];
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private citiesService: CitiesService,
+              private citiesSearchService: CitiesSearchService) {
   }
 
   ngOnInit() {
-    this.httpClient.get('/assets/russian-cities.json').subscribe(data => {
-      this.products = data;
+
+    this.cities = this.citiesService.getCities();
+    this.citiesFound = this.cities;
+
+    this.citiesSearchService.searchCities$.subscribe({
+      next: (value: any) => {
+        console.log(value);
+        if (value.inputType === 'deleteContentBackward') {
+          this.searchValue = this.searchValue.slice(0, -1);
+          this.citiesFound = this.cities.filter((el) => el.name.includes(this.searchValue));
+        } else {
+          this.searchValue += value.data;
+          this.citiesFound = this.cities.filter((el) => el.name.includes(this.searchValue));
+        }
+      },
+
+      error: err => console.log(err)
     });
+
   }
 }
 
-// Поле	Описание
-// name	Название города
-// subject	Регион
-// district	Федеральный округ
-// population	Население
-// coords	Координаты ('lat' - широта, 'lon' - долгота)

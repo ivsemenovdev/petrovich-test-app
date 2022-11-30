@@ -5,10 +5,10 @@
   <h1 class="dialog-title" mat-dialog-title>Выберите ваш город</h1>
   <mat-form-field class="dialog-input">
     <mat-label>Ваш город ...</mat-label>
-    <input matInput>
+    <input id="search" matInput name="s" type="text">
     <!--    <input matInput [(ngModel)]="name">-->
   </mat-form-field>
   <div class="dialog-content" mat-dialog-content>
-    <p *ngFor="let key of products">{{ key.name }}</p>
+    <p *ngFor="let key of citiesFound">{{ key.name }}</p>
   </div>
 </div>
