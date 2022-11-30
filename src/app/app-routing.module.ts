@@ -1,6 +1,6 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {SiteLayoutComponent} from "./layouts/site-layout/site-layout.component";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
 
 const routes: Routes = [
   {

@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dialog',
@@ -15,9 +15,9 @@ export class DialogComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.httpClient.get("/assets/russian-cities.json").subscribe(data => {
+    this.httpClient.get('/assets/russian-cities.json').subscribe(data => {
       this.products = data;
-    })
+    });
   }
 }
 

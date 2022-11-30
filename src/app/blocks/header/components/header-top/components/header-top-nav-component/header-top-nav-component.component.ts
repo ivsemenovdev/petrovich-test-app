@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {HeaderLinkInterface} from "src/app/blocks/header/header-link.interface";
+import { HeaderLinkInterface } from 'src/app/blocks/header/header-link.interface';
 
 @Component({
   selector: 'app-header-top-nav-component',

@@ -2,13 +2,13 @@
   <div class="dialog-close">
     <mat-icon mat-dialog-close="true">close</mat-icon>
   </div>
-  <h1 mat-dialog-title class="dialog-title">Выберите ваш город</h1>
+  <h1 class="dialog-title" mat-dialog-title>Выберите ваш город</h1>
   <mat-form-field class="dialog-input">
     <mat-label>Ваш город ...</mat-label>
     <input matInput>
     <!--    <input matInput [(ngModel)]="name">-->
   </mat-form-field>
-  <div mat-dialog-content class="dialog-content">
+  <div class="dialog-content" mat-dialog-content>
     <p *ngFor="let key of products">{{ key.name }}</p>
   </div>
 </div>

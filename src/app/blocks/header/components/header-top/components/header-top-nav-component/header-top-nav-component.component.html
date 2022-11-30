@@ -1,6 +1,6 @@
 <nav class="header-top-nav">
   <ul class="header-top-nav__list">
-    <li class="header-top-nav__item" *ngFor="let menuItem of menuItems">
+    <li *ngFor="let menuItem of menuItems" class="header-top-nav__item">
       <a routerLink="{{menuItem.route}}">{{menuItem.item}}</a>
     </li>
   </ul>

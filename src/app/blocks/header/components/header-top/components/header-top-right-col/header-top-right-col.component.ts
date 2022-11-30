@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {DialogComponent} from "./components/dialog/dialog.component";
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 
 @Component({
@@ -10,11 +10,12 @@ import {DialogComponent} from "./components/dialog/dialog.component";
 })
 
 export class HeaderTopRightColComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {
+  }
 
   openDialog() {
 
-    let dialogBoxSettings = {
+    const dialogBoxSettings = {
       height: 'auto',
       width: '500px',
       margin: '0 auto',
