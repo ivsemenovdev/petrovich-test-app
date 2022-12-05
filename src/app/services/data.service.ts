@@ -47,14 +47,20 @@ export class DataService {
 
   //создадим метод для отправки POST запроса и отправки данных
   public addProduct(path: string, value: ProductInterface): Observable<ProductInterface[]> {
-    return this.http.post<ProductInterface[]>(this.api + path, value)
+    return this.http.post<ProductInterface[]>(this.api + path, value);
   }
 
   //создадим метод для отправки DELETE запроса
   public removeProduct(path: string, id: number): Observable<string> {
-    return this.http.delete<string>(`${this.api + path}/${id}`)
+    return this.http.delete<string>(`${this.api + path}/${id}`);
+  }
+
+  //создадим метод для отправки PUT запроса
+  public updateProduct(path: string, value: ProductInterface): Observable<ProductInterface[]> {
+    return this.http.put<ProductInterface[]>(this.api + path + `/${value.id}`, value);
   }
 
 }
+
 
 

@@ -10,8 +10,14 @@
     box-sizing: border-box;
     height: 45px;
     width: 100%;
-    margin-bottom: 20px;
     padding: 10px;
+    margin-bottom: 20px;
+
+    &.updating-input {
+      height: 20px;
+      font-size: 18px;
+      margin: 10px 0;
+    }
   }
 
   button {
@@ -21,15 +27,47 @@
   }
 
   .product {
+    box-sizing: border-box;
     font: {
       family: "Comic Sans MS";
-      size: 16px;
+      size: 20px;
       weight: 700;
     }
-    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid red;
-    padding: 20px;
+    padding: 5px 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    margin-top: 20px;
+    margin-top: 10px;
+    max-height: 40px;
+
+    svg-icon {
+      padding: 5px;
+      display: none;
+    }
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0 5px 8px;
+      cursor: pointer;
+      background-color: #e1dfdf;
+
+      svg-icon {
+        display: inline-flex;
+
+        &:hover {
+          box-shadow: rgba(112, 26, 26, 0.24) 0 2px 8px;
+        }
+      }
+    }
   }
+
+}
+
+.updating-input {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  display: inline-flex;
+  border: none;
 }

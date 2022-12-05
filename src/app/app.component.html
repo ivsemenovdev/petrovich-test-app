@@ -1,20 +1,29 @@
 <!--<router-outlet></router-outlet>-->
+
 <div class="container">
   <input (focus)="isFocused = true" (focusout)="isFocused = false" [(ngModel)]="input" placeholder="Send your test ..."
          type="text">
   <button #btn (click)="OnSendMsg()">Send</button>
-  <div *ngFor="let product of products$ | async" class="product">
-    <span>
+  <div #updatingContainer (click)="onUpdateProduct(product)" *ngFor="let product of products$ | async"
+       class="product updatable">
+    <span *ngIf="!(isCardClicked && product.id === updatingInput.id && !isFocused); else update" class="updatable">
        {{product?.name}}
     </span>
-    <button (click)="onRemoveProduct(product.id)">
+    <ng-template #update>
+      <input
+        #updatingInputElement
+        [(ngModel)]="updatingInputName"
+        class="updating-input updatable"
+        type="text"
+      >
+    </ng-template>
+    <button (click)="onRemoveProduct(product.id, $event)">
       Delete
     </button>
     <!--    <svg-icon-->
-    <!--      -->
-    <!--      (click)="onRemoveProduct(product.id)">-->
-    <!--      &lt;!&ndash;      [svgStyle]="{ 'width.px':16 }"&ndash;&gt;-->
-    <!--      &lt;!&ndash;      src="assets/icons/close.svg"&ndash;&gt;-->
-    <!--    </svg-icon>-->
+    <!--      src="assets/icons/close.svg"-->
+    <!--      [svgStyle]="{ 'width.px':16 }"-->
+    <!--      (click)="onRemoveProduct(product.id, $event)"-->
+    <!--    ></svg-icon>-->
   </div>
 </div>

@@ -11,11 +11,18 @@ export enum TestRootEnum {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit, OnDestroy {
+
+  isCardClicked = false;
   isFocused = false;
   input!: string;
+  updatingInput!: ProductInterface;
+  updatingInputName!: string;
   products = TestRootEnum.PRODUCTS;
   @ViewChild('btn') btn!: ElementRef;
+  @ViewChild('updatingInputElement') updatingInputElement!: ElementRef;
+  @ViewChild('updatingContainer') updatingContainer!: ElementRef;
   private _destroy$ = new Subject();
   private _products$ = new BehaviorSubject<ProductInterface[]>([]);
   products$ = this._products$.asObservable();
@@ -28,11 +35,20 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private dataService: DataService) {
   }
 
-  @HostListener('document:keydown.enter')
-  onEnterHandler() {
-    if (!this.isFocused) return;
+  @HostListener('document:click', ['$event', '$event.target'])
+  onOutsideClick(event: MouseEvent, targetElement: HTMLElement): void {
+    if (!targetElement.className.split(' ').includes('updatable')) {
+      this.isCardClicked = false;
+    }
+  }
 
-    this.btn.nativeElement.click();
+  @HostListener('document:keydown.enter')
+  onEnterHandler(): void {
+    if (this.isFocused) {
+      this.btn.nativeElement.click();
+    } else if (this.isCardClicked) {
+      this.onSendUpdate();
+    } else return;
   }
 
   ngOnInit(): void {
@@ -44,7 +60,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this._destroy$.complete();
   }
 
-  OnSendMsg() {
+  OnSendMsg(): void {
+    this.isCardClicked = false;
+
     if (!this.input) return;
 
     this.dataService.addProduct('product', ({id: 12, name: this.input, category_id: 32, price: 345, brand: 'Комета'}))
@@ -58,7 +76,8 @@ export class AppComponent implements OnInit, OnDestroy {
       ).subscribe();
   }
 
-  onRemoveProduct(id: number) {
+  onRemoveProduct(id: number, event: MouseEvent): void {
+    event.stopPropagation();
     this.dataService.removeProduct('product', id)
       .pipe(
         switchMap(() => this.getProducts$),
@@ -69,4 +88,29 @@ export class AppComponent implements OnInit, OnDestroy {
         takeUntil(this._destroy$)
       ).subscribe();
   }
+
+  onUpdateProduct(product: ProductInterface): void {
+    this.isCardClicked = true;
+    this.updatingInput = product;
+    this.updatingInputName = product.name;
+
+    setTimeout(() => {
+      this.updatingInputElement?.nativeElement.focus();
+    }, 0);
+
+  }
+
+  onSendUpdate(): void {
+    this.updatingInput.name = this.updatingInputElement?.nativeElement?.value;
+    this.dataService.updateProduct('product', this.updatingInput)
+      .pipe(
+        switchMap(() => this.getProducts$),
+        tap(res => {
+          this._products$.next(res);
+          this.isCardClicked = false;
+        }),
+        takeUntil(this._destroy$)
+      ).subscribe();
+  }
 }
+
