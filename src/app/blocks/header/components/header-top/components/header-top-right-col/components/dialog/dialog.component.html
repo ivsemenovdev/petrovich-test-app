@@ -3,12 +3,18 @@
     <mat-icon mat-dialog-close="true">close</mat-icon>
   </div>
   <h1 class="dialog-title" mat-dialog-title>Выберите ваш город</h1>
-  <mat-form-field class="dialog-input">
-    <mat-label>Ваш город ...</mat-label>
-    <input id="search" matInput name="s" type="text">
-    <!--    <input matInput [(ngModel)]="name">-->
-  </mat-form-field>
-  <div class="dialog-content" mat-dialog-content>
-    <p *ngFor="let key of citiesFound">{{ key.name }}</p>
-  </div>
+  <form class="dialog-input">
+    <mat-form-field appearance="fill" class="dialog-full-width">
+      <mat-label>Ваш город ...</mat-label>
+      <input [formControl]="selectCities"
+             [matAutocomplete]="auto"
+             matInput
+             type="text">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option (click)="closeDialog(option)" *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
 </div>
