@@ -9,3 +9,24 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+
+//Customizing Angular Material Dialog component styles
+//I have not found another solution(((
+
+//.mat-mdc-autocomplete-panel {
+//  max-height: none !important;
+//}
+//
+.mat-mdc-autocomplete-panel {
+  box-shadow: none;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+.mat-mdc-autocomplete-panel::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
