@@ -1,0 +1,25 @@
+.mat-toolbar-multiple-rows {
+  min-height: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header-top-container {
+  display: flex;
+  background-color: #fc3;
+  border-bottom: 4px solid #ffefbf;
+  height: 52px;
+  padding: 4px 16px;
+
+  app-header-top {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  app-header-top {
+    max-width: 1140px;
+  }
+}

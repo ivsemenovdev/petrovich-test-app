@@ -1,0 +1,17 @@
+.dialog {
+
+  user-select: none;
+
+  .dialog-close {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .dialog-full-width {
+    width: 100%;
+  }
+
+}
