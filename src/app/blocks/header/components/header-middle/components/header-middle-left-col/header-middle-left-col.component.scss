@@ -1,0 +1,33 @@
+.header-middle__logo {
+  max-width: 134px;
+  min-width: 134px;
+  margin-right: 24px;
+}
+
+.header-middle__search {
+  display: flex;
+
+  .input {
+    min-width: 566px;
+    height: 40px;
+    border: 1px solid #fc3;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #fc3;;
+    height: 40px;
+    width: 74px;
+    border: 1px solid #fc3;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.header-middle-left-col-content {
+  display: flex;
+  align-items: center;
+  min-width: 700px;
+}

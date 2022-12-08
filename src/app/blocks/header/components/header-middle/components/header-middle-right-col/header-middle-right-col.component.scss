@@ -1,0 +1,22 @@
+.header-middle-nav__list {
+  display: flex;
+  padding-right: 24px;
+}
+
+.header-middle__basket {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-left: 1px solid gray;
+  padding-left: 6px;
+}
+
+mat-icon {
+  cursor: pointer;
+  margin: 0 6px;
+}
+
+.header-middle-right-col-content {
+  display: flex;
+  align-items: center;
+}

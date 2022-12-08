@@ -31,6 +31,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CitiesService } from './services/cities.service';
 import { CitiesSearchService } from './services/cities-search.service';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AuthComponent } from './blocks/auth/auth.component';
+import { HeaderMiddleLeftColComponent } from './blocks/header/components/header-middle/components/header-middle-left-col/header-middle-left-col.component';
+import { HeaderMiddleRightColComponent } from './blocks/header/components/header-middle/components/header-middle-right-col/header-middle-right-col.component';
 
 
 @NgModule({
@@ -46,6 +49,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     HeaderTopNavComponentComponent,
     HeaderTopRightColComponent,
     DialogComponent,
+    AuthComponent,
+    HeaderMiddleLeftColComponent,
+    HeaderMiddleRightColComponent,
   ],
   imports: [
     BrowserModule,

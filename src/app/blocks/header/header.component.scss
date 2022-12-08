@@ -4,6 +4,10 @@
   font-weight: 500;
 }
 
+.header-container {
+  background-color: #fff;
+}
+
 .header-top-container {
   display: flex;
   background-color: #fc3;
@@ -15,11 +19,24 @@
     width: 100%;
     margin: 0 auto;
   }
-
 }
 
+.header-middle-container {
+  display: flex;
+  border-bottom: 1px solid #ebedf8;
+  height: 77px;
+  padding: 4px 16px;
+
+  app-header-middle {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
 @media (min-width: 1200px) {
-  app-header-top {
+  app-header-top,
+  app-header-middle {
     max-width: 1140px;
   }
 }
