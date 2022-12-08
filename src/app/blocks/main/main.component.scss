@@ -1,3 +1,5 @@
-p {
-  height: 500px;
+@media (min-width: 1200px) {
+  app-banner {
+    max-width: 1140px;
+  }
 }
