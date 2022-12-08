@@ -34,6 +34,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AuthComponent } from './blocks/auth/auth.component';
 import { HeaderMiddleLeftColComponent } from './blocks/header/components/header-middle/components/header-middle-left-col/header-middle-left-col.component';
 import { HeaderMiddleRightColComponent } from './blocks/header/components/header-middle/components/header-middle-right-col/header-middle-right-col.component';
+import { BannerComponent } from './blocks/main/components/banner/banner.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { HeaderMiddleRightColComponent } from './blocks/header/components/header
     AuthComponent,
     HeaderMiddleLeftColComponent,
     HeaderMiddleRightColComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

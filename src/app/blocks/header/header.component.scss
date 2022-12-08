@@ -33,6 +33,17 @@
   }
 }
 
+.header-bottom-container {
+  display: flex;
+  border-bottom: 1px solid #ebedf8;
+  height: 56px;
+
+  app-header-bottom {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 
 @media (min-width: 1200px) {
   app-header-top,
