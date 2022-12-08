@@ -32,9 +32,15 @@ import { CitiesService } from './services/cities.service';
 import { CitiesSearchService } from './services/cities-search.service';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AuthComponent } from './blocks/auth/auth.component';
-import { HeaderMiddleLeftColComponent } from './blocks/header/components/header-middle/components/header-middle-left-col/header-middle-left-col.component';
-import { HeaderMiddleRightColComponent } from './blocks/header/components/header-middle/components/header-middle-right-col/header-middle-right-col.component';
+import {
+  HeaderMiddleLeftColComponent
+} from './blocks/header/components/header-middle/components/header-middle-left-col/header-middle-left-col.component';
+import {
+  HeaderMiddleRightColComponent
+} from './blocks/header/components/header-middle/components/header-middle-right-col/header-middle-right-col.component';
 import { BannerComponent } from './blocks/main/components/banner/banner.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { EcosystemComponent } from './blocks/main/components/ecosystem/ecosystem.component';
 
 
 @NgModule({
@@ -54,6 +60,7 @@ import { BannerComponent } from './blocks/main/components/banner/banner.componen
     HeaderMiddleLeftColComponent,
     HeaderMiddleRightColComponent,
     BannerComponent,
+    EcosystemComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +76,7 @@ import { BannerComponent } from './blocks/main/components/banner/banner.componen
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+    MatGridListModule,
   ],
   providers: [CitiesService, CitiesSearchService],
   bootstrap: [AppComponent]
