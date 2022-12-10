@@ -27,9 +27,10 @@ import {
 } from './blocks/header/components/header-top/components/header-top-right-col/components/dialog/dialog.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
-import { CitiesService } from './services/cities.service';
-import { CitiesSearchService } from './services/cities-search.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { DataService } from './services/data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -58,8 +59,11 @@ import { CitiesSearchService } from './services/cities-search.service';
     MatButtonModule,
     MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    HttpClientModule,
   ],
-  providers: [CitiesService, CitiesSearchService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

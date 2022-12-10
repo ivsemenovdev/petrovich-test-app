@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>-->
+<div class="container">
+  <input (focus)="isFocused = true" (focusout)="isFocused = false" [(ngModel)]="input" placeholder="Send your test ..."
+         type="text">
+  <button #btn (click)="OnSendMsg()">Send</button>
+  <div *ngFor="let product of products$ | async" class="product">
+    <span>
+       {{product?.name}}
+    </span>
+    <button (click)="onRemoveProduct(product.id)">
+      Delete
+    </button>
+    <!--    <svg-icon-->
+    <!--      -->
+    <!--      (click)="onRemoveProduct(product.id)">-->
+    <!--      &lt;!&ndash;      [svgStyle]="{ 'width.px':16 }"&ndash;&gt;-->
+    <!--      &lt;!&ndash;      src="assets/icons/close.svg"&ndash;&gt;-->
+    <!--    </svg-icon>-->
+  </div>
+</div>
