@@ -42,6 +42,7 @@ import { BannerComponent } from './blocks/main/components/banner/banner.componen
 import { MatGridListModule } from '@angular/material/grid-list';
 import { EcosystemComponent } from './blocks/main/components/ecosystem/ecosystem.component';
 import { BenefitsComponent } from './blocks/main/components/benefits/benefits.component';
+import { PromoteProductComponent } from './blocks/main/components/promote-product/promote-product.component';
 
 
 @NgModule({
@@ -63,6 +64,7 @@ import { BenefitsComponent } from './blocks/main/components/benefits/benefits.co
     BannerComponent,
     EcosystemComponent,
     BenefitsComponent,
+    PromoteProductComponent,
   ],
   imports: [
     BrowserModule,
