@@ -41,6 +41,7 @@ import {
 import { BannerComponent } from './blocks/main/components/banner/banner.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { EcosystemComponent } from './blocks/main/components/ecosystem/ecosystem.component';
+import { BenefitsComponent } from './blocks/main/components/benefits/benefits.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { EcosystemComponent } from './blocks/main/components/ecosystem/ecosystem
     HeaderMiddleRightColComponent,
     BannerComponent,
     EcosystemComponent,
+    BenefitsComponent,
   ],
   imports: [
     BrowserModule,

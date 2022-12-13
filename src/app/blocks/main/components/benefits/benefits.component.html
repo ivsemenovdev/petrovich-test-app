@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <mat-grid-list cols="12" rowHeight="56px">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<div class="benefit-wrapper">
+  <div class="benefit-content">
+    <div class="benefit-icon">
+      <img alt="svg" src="./assets/icons/benefit-first.svg">
+    </div>
+    <div class="benefit-text">
+      <strong>Большой ассортимент</strong><br>
+      строительных материалов всегда в наличии
+    </div>
+  </div>
+  <div class="benefit-content">
+    <div class="benefit-icon">
+      <img alt="svg" src="./assets/icons/benefit-second.svg">
+    </div>
+    <div class="benefit-text">
+      <strong>Доставка стройматериалов</strong><br>
+      в течение двух часов или в любое удобное время
+    </div>
+  </div>
+  <div class="benefit-content">
+    <div class="benefit-icon">
+      <img alt="svg" src="./assets/icons/benefit-third.svg">
+    </div>
+    <div class="benefit-text">
+      <strong>Простой возврат товаров</strong><br>
+      которые не пригодились в течение 360 дней
+    </div>
+  </div>
+  <div class="benefit-content">
+    <div class="benefit-icon">
+      <img alt="svg" src="./assets/icons/benefit-four.svg">
+    </div>
+    <div class="benefit-text">Многоуровневая
+      <strong>система управления качеством</strong> по стандарту ISO 9001
+    </div>
+  </div>
+</div>
