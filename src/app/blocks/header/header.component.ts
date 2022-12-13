@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+
+  headerMiddleFixed = false;
+
+  @HostListener('window:scroll') onScroll() {
+    this.headerMiddleFixed = window.scrollY > 48;
+  }
 
 }
